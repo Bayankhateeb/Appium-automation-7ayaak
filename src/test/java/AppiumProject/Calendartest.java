@@ -193,24 +193,22 @@ public class Calendartest extends BasicTest {
 			
 		
 			}
-
-			public void scrollToEndAction() {
+			
+			
+			
+			public void scrolldowncalndar () {
 				WebElement appointmentIcon = driver.findElement(AppiumBy.accessibilityId(null));
-	     	     
-        		appointmentIcon.click();
+	    	     
+	    		appointmentIcon.click();
+				scrollToEndAction();
+			}
+			 
+				
      	      
 				 
-				 boolean canScrollMore;
-				 do
-				 {
-			  canScrollMore = (Boolean) ((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", ImmutableMap.of(
-					 "left", 100, "top", 100, "width", 200, "height", 200,
-					 "direction", "down",
-					 "percent", 3.0));  // No prior idea just keep scrolling 
-				 } while (canScrollMore);
 				 
 				 
-			 }
+			 
 			
 							public void RefreshCalendarPage() {
 				     	  		WebElement appointmentIcon = driver.findElement(AppiumBy.accessibilityId(null));
